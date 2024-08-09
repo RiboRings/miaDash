@@ -1,6 +1,6 @@
-pandoc: '3.2'
+pandoc: '3.3'
 pkgdown: 2.1.0
 pkgdown_sha: ~
 articles:
   iSEEbug: iSEEbug.html
-last_built: 2024-08-09T19:54Z
+last_built: 2024-08-09T21:53Z
