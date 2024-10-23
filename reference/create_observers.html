@@ -46,7 +46,7 @@ and Launch buttons."><!-- mathjax --><script src="https://cdnjs.cloudflare.com/a
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Observers</h1>
-    <small class="dont-index">Source: <a href="https://github.com/RiboRings/iSEEbug/blob/devel/R/observers.R" class="external-link"><code>R/observers.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/RiboRings/iSEEbug/blob/transform/R/observers.R" class="external-link"><code>R/observers.R</code></a></small>
     <div class="hidden name"><code>create_observers.Rd</code></div>
     </div>
 
@@ -57,7 +57,13 @@ and Launch buttons.</p>
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">.create_observers</span><span class="op">(</span><span class="va">input</span>, <span class="va">session</span>, <span class="va">rObjects</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">.create_import_observers</span><span class="op">(</span><span class="va">input</span>, <span class="va">rObjects</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">.create_manipulate_observers</span><span class="op">(</span><span class="va">input</span>, <span class="va">rObjects</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">.create_estimate_observers</span><span class="op">(</span><span class="va">input</span>, <span class="va">rObjects</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">.update_observers</span><span class="op">(</span><span class="va">input</span>, <span class="va">session</span>, <span class="va">rObjects</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">.create_launch_observers</span><span class="op">(</span><span class="va">FUN</span>, <span class="va">input</span>, <span class="va">session</span>, <span class="va">rObjects</span><span class="op">)</span></span></code></pre></div>
     </div>
