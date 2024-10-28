@@ -1,13 +1,13 @@
 <urlset xmlns = 'http://www.sitemaps.org/schemas/sitemap/0.9'>
 <url><loc>/404.html</loc></url>
-<url><loc>/articles/iSEEbug.html</loc></url>
 <url><loc>/articles/index.html</loc></url>
+<url><loc>/articles/miaDash.html</loc></url>
 <url><loc>/authors.html</loc></url>
 <url><loc>/index.html</loc></url>
 <url><loc>/reference/create_observers.html</loc></url>
-<url><loc>/reference/iSEEbug.html</loc></url>
 <url><loc>/reference/index.html</loc></url>
 <url><loc>/reference/landing_page.html</loc></url>
+<url><loc>/reference/miaDash.html</loc></url>
 <url><loc>/reference/render_output.html</loc></url>
 </urlset>
 
