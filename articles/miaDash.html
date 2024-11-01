@@ -48,7 +48,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/RiboRings/miaDash/" class="external-link">
+  <a href="https://github.com/microbiome/miaDash/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
 
   </a>
@@ -76,7 +76,7 @@ Turku<br><a class="author_email" href="mailto:#"></a><a href="mailto:giulio.bene
                   
             <h4 data-toc-skip class="date">1 November 2024</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/RiboRings/miaDash/blob/devel/vignettes/miaDash.Rmd" class="external-link"><code>vignettes/miaDash.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/microbiome/miaDash/blob/devel/vignettes/miaDash.Rmd" class="external-link"><code>vignettes/miaDash.Rmd</code></a></small>
       <div class="hidden name"><code>miaDash.Rmd</code></div>
 
     </div>
@@ -88,9 +88,9 @@ Turku<br><a class="author_email" href="mailto:#"></a><a href="mailto:giulio.bene
 </h2>
 <p>This notebook provides a practical introduction to the Microbiome
 Analysis Dashboard (miaDash), an interactive app to analyse and explore
-microbiome data. Feel free to try it online at <a href="https://iseebug-iseebug.2.rahtiapp.fi/" class="external-link">this address</a> with your
-data or one of the ready-to-use example datasets. Here, its usage and
-functionality are described in more detail.</p>
+microbiome data. Feel free to try it online at <a href="https://microbiome-miadash.2.rahtiapp.fi/" class="external-link">this address</a> with
+your data or one of the ready-to-use example datasets. Here, its usage
+and functionality are described in more detail.</p>
 <div class="section level3">
 <h3 id="motivation">Motivation<a class="anchor" aria-label="anchor" href="#motivation"></a>
 </h3>
@@ -139,8 +139,10 @@ consider subsetting and/or agglomerating the data.</p>
 <p>If you decided to run the app locally, make sure to have R installed
 in your machine and execute the following command:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Install from GitHub</span></span>
-<span><span class="fu">remotes</span><span class="fu">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html" class="external-link">install_github</a></span><span class="op">(</span><span class="st">"RiboRings/miaDash"</span><span class="op">)</span></span></code></pre></div>
+<code class="sourceCode R"><span><span class="kw">if</span> <span class="op">(</span><span class="op">!</span><span class="fu"><a href="https://rdrr.io/r/base/ns-load.html" class="external-link">requireNamespace</a></span><span class="op">(</span><span class="st">"BiocManager"</span>, quietly <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span><span class="op">)</span></span>
+<span>    <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"BiocManager"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu">BiocManager</span><span class="fu">::</span><span class="fu"><a href="https://bioconductor.github.io/BiocManager/reference/install.html" class="external-link">install</a></span><span class="op">(</span><span class="st">"miaDash"</span><span class="op">)</span></span></code></pre></div>
 <p>Once the package is successfully installed, you should have access to
 the development version of miaDash.</p>
 </div>
@@ -152,7 +154,7 @@ it locally, run the next code chunk to launch the app. Otherwise, you
 can skip it.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Import miaDash</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/RiboRings/miaDash" class="external-link">miaDash</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/microbiome/miaDash" class="external-link">miaDash</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Instantiate app</span></span>
 <span><span class="va">app</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/miaDash.html">miaDash</a></span><span class="op">(</span><span class="op">)</span></span>
@@ -199,7 +201,7 @@ Thank you!</p>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt;   Benedetti G, Lahti L (????). _miaDash: Shiny app for interactive</span></span>
 <span><span class="co">#&gt;   analysis and exploration of microbiome data_. R package version</span></span>
-<span><span class="co">#&gt;   0.2.0, &lt;https://github.com/RiboRings/miaDash&gt;.</span></span>
+<span><span class="co">#&gt;   0.2.0, &lt;https://github.com/microbiome/miaDash&gt;.</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; A BibTeX entry for LaTeX users is</span></span>
 <span><span class="co">#&gt; </span></span>
@@ -207,7 +209,7 @@ Thank you!</p>
 <span><span class="co">#&gt;     title = {miaDash: Shiny app for interactive analysis and exploration of microbiome data},</span></span>
 <span><span class="co">#&gt;     author = {Giulio Benedetti and Leo Lahti},</span></span>
 <span><span class="co">#&gt;     note = {R package version 0.2.0},</span></span>
-<span><span class="co">#&gt;     url = {https://github.com/RiboRings/miaDash},</span></span>
+<span><span class="co">#&gt;     url = {https://github.com/microbiome/miaDash},</span></span>
 <span><span class="co">#&gt;   }</span></span></code></pre></div>
 </div>
 <div class="section level3">
