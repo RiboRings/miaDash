@@ -16,7 +16,6 @@
 }
 
 #' @rdname utils
-#' @importFrom shiny showNotification
 .update_tse <- function(tse, fun, fun_args) {
 
     tse <- tryCatch({withCallingHandlers({
@@ -41,7 +40,6 @@
 }
 
 #' @rdname utils
-#' @importFrom shiny showModal modalDialog
 .print_message <- function(..., title = "Invalid input:") {
 
     # nocov start

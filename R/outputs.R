@@ -13,7 +13,6 @@
 #' @keywords internal
 
 #' @rdname render_output
-#' @importFrom shiny renderPrint
 .render_overview <- function(output, rObjects) {
   
     # nocov start
@@ -26,7 +25,6 @@
 }
 
 #' @rdname render_output
-#' @importFrom shiny downloadHandler
 .render_download <- function(output, rObjects) {
   
     # nocov start

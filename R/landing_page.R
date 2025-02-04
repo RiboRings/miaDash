@@ -10,10 +10,6 @@
 #' @keywords internal
 
 #' @rdname landing_page
-#' @importFrom shiny actionButton fluidRow tabPanel tabsetPanel renderUI
-#'   selectInput sliderInput textInput wellPanel reactiveValues radioButtons
-#'   numericInput fileInput checkboxInput verbatimTextOutput downloadButton
-#'   conditionalPanel
 #' @importFrom shinydashboard dashboardPage dashboardHeader dashboardSidebar
 #'   dashboardBody box
 #' @importFrom htmltools HTML br tags div tagList
