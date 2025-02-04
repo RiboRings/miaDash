@@ -43,12 +43,9 @@ The basic functionality of miaDash can be explored as follows:
 # Import miaDash
 library(miaDash)
 
-# Instantiate app
-app <- miaDash()
-
 # Launch miaDash
 if (interactive()) {
-  shiny::runApp(app)
+  miaDash()
 }
 ```
 
