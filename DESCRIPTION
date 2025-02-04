@@ -1,5 +1,5 @@
 Package: miaDash
-Version: 0.99.5
+Version: 0.99.6
 Authors@R: 
     c(person(given = "Giulio", family = "Benedetti", role = c("aut", "cre"),
            email = "giulio.benedetti@utu.fi",
@@ -21,7 +21,8 @@ License: Artistic-2.0
 Encoding: UTF-8
 Depends:
     R (>= 4.4.0),
-    iSEE
+    iSEE,
+    shiny
 Imports:
     ape,
     biomformat,
@@ -31,7 +32,6 @@ Imports:
     mia,
     rintrojs,
     scater,
-    shiny,
     shinydashboard,
     shinyjs,
     S4Vectors,

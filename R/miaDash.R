@@ -22,7 +22,6 @@
 #' @export
 #' @rdname miaDash
 #' @importFrom iSEE iSEE
-#' @importFrom shiny addResourcePath
 #' @importFrom utils packageVersion
 #' @importFrom htmltools tags
 miaDash <- function() {

@@ -10,10 +10,6 @@
 #' @keywords internal
 
 #' @rdname landing_page
-#' @importFrom shiny actionButton fluidRow tabPanel tabsetPanel renderUI
-#'   selectInput sliderInput textInput wellPanel reactiveValues radioButtons
-#'   numericInput fileInput checkboxInput verbatimTextOutput downloadButton
-#'   conditionalPanel
 #' @importFrom shinydashboard dashboardPage dashboardHeader dashboardSidebar
 #'   dashboardBody box
 #' @importFrom htmltools HTML br tags div tagList
@@ -48,29 +44,30 @@
                         tabPanel(title = "R Object", value = "rds", br(),
                                    
                             fileInput(inputId = "file", label = "RDS:",
-                                accept = ".rds")),
+                                accept = ".rds", placeholder = "object.rds")),
                           
                         tabPanel(title = "Raw Data", value = "raw", br(),
                                    
                             fileInput(inputId = "assay", label = "Assays:",
-                                accept = ".csv", multiple = TRUE),
+                                accept = ".csv", multiple = TRUE,
+                                placeholder = "assay.csv"),
                             div(style = "margin-top: -20px"),
                                    
                             fileInput(inputId = "coldata", label = "colData:",
-                                accept = ".csv"),
+                                accept = ".csv", placeholder = "coldata.csv"),
                             div(style = "margin-top: -20px"),
                         
                             fileInput(inputId = "rowdata", label = "rowData:",
-                                accept = ".csv"),
+                                accept = ".csv", placeholder = "rowdata.csv"),
                             div(style = "margin-top: -20px"),
                             
                             fileInput(inputId = "row.tree",
-                                  label = "rowTree:",
+                                  label = "rowTree:", placeholder = "row.tree",
                                   accept = c(".tree", ".tre")),
                             div(style = "margin-top: -20px"),
                 
                             fileInput(inputId = "col.tree",
-                                  label = "colTree:",
+                                  label = "colTree:", placeholder = "col.tree",
                                   accept = c(".tree", ".tre")),
                             div(style = "margin-top: -20px")),
                           
@@ -82,7 +79,8 @@
                              
                             fileInput(inputId = "main.file",
                                 label = "Main file:", accept = c(".biom",
-                                ".QZA", ".txt")),
+                                ".QZA", ".txt"),
+                                placeholder = "biom, QZA or txt"),
                             div(style = "margin-top: -20px"),
                              
                             conditionalPanel(
@@ -98,11 +96,12 @@
                                 condition = "input.ftype == 'MetaPhlAn'",
                                
                                 fileInput(inputId = "col.data",
-                                    label = "colData:", accept = ".tsv"),
+                                    label = "colData:", accept = ".tsv",
+                                    placeholder = "coldata.tsv"),
                                 div(style = "margin-top: -20px"),
                                  
                                 fileInput(inputId = "tree.file",
-                                    label = "Tree:",
+                                    label = "Tree:", placeholder = "tree.tree",
                                     accept = c(".tree", ".tre"))))),
               
                     actionButton("import", "Upload", class = "btn-primary")),

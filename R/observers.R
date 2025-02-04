@@ -17,7 +17,6 @@
 #' @importFrom utils read.csv
 #' @importFrom ape read.tree
 #' @importFrom S4Vectors DataFrame
-#' @importFrom shiny isolate observeEvent req
 #' @importFrom biomformat read_biom
 #' @importFrom mia convertFromBIOM importMetaPhlAn
 #' @importFrom TreeSummarizedExperiment TreeSummarizedExperiment
@@ -113,7 +112,6 @@
 }
 
 #' @rdname create_observers
-#' @importFrom shiny isolate observeEvent req
 #' @importFrom SummarizedExperiment assay
 #' @importFrom mia subsetByPrevalent subsetByRare agglomerateByRank
 #'   transformAssay
@@ -195,7 +193,6 @@
 
 #' @rdname create_observers
 #' @importFrom stats as.formula
-#' @importFrom shiny isolate observeEvent req
 #' @importFrom mia addAlpha runNMDS runRDA getDissimilarity
 #' @importFrom TreeSummarizedExperiment rowTree
 #' @importFrom scater runMDS runPCA
@@ -300,7 +297,6 @@
 }
 
 #' @rdname create_observers
-#' @importFrom shiny updateSelectInput updateNumericInput observe
 #' @importFrom SummarizedExperiment assayNames
 #' @importFrom mia taxonomyRanks
 #' @importFrom rintrojs introjs
@@ -344,7 +340,6 @@
 }
 
 #' @rdname create_observers
-#' @importFrom shiny observeEvent
 .create_launch_observers <- function(FUN, input, session, rObjects) {
   
     # nocov start

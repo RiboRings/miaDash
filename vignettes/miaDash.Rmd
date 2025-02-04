@@ -14,6 +14,7 @@ output:
         number_sections: true
         self_contained: true
         code_folding: show
+bibliography: ../inst/REFERENCES.bib
 date: "`r doc_date()`"
 package: "`r pkg_ver('miaDash')`"
 vignette: >
@@ -26,21 +27,6 @@ vignette: >
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
-)
-```
-
-```{r vignetteSetup, echo=FALSE, message=FALSE, warning=FALSE}
-## Bib setup
-library(RefManageR)
-
-## Write bibliography information
-bib <- c(
-    R = citation(),
-    mia = citation("mia")[1],
-    iSEEtree = citation("iSEEtree")[1],
-    iSEE = citation("iSEE")[1],
-    TreeSummarizedExperiment = citation("TreeSummarizedExperiment")[1],
-    shiny = citation("shiny")[1]
 )
 ```
 
@@ -169,12 +155,12 @@ citation("miaDash")
 miaDash originates from the joint effort of the R/Bioconductor community. It is
 mainly based on the following software:
 
-- R `r Citep(bib[["R"]])`, statistical programming language
-- `r Biocpkg("mia")` `r Citep(bib[["mia"]])`, framework for microbiome data analysis
-- `r Biocpkg("iSEEtree")` `r Citep(bib[["iSEEtree"]])`, TreeSummarizedExperiment interactive explorer
-- `r Biocpkg("iSEE")` `r Citep(bib[["iSEE"]])`, SummarizedExperiment interactive explorer
-- `r Biocpkg("TreeSummarizedExperiment")` `r Citep(bib[["TreeSummarizedExperiment"]])`, S4 container for hierarchical data
-- `r CRANpkg("shiny")` `r Citep(bib[["shiny"]])`, web app development in R
+- [R](https://www.r-project.org/), statistical programming language [@core2024r]
+- [mia](https://bioconductor.org/packages/release/bioc/html/mia.html), framework for microbiome data analysis [@borman2024mia]
+- [iSEEtree](https://bioconductor.org/packages/release/bioc/html/iSEEtree.html), TreeSummarizedExperiment interactive explorer [@benedetti2024iseetree]
+- [iSEE](https://bioconductor.org/packages/release/bioc/html/iSEE.html), SummarizedExperiment interactive explorer [@rue2018isee]
+- [TreeSummarizedExperiment](https://bioconductor.org/packages/release/bioc/html/TreeSummarizedExperiment.htmlm), S4 container for hierarchical data [@huang2020treesummarizedexperiment]
+- [shiny](https://cran.r-project.org/web/packages/shiny/index.html), web app development in R [@chang2024shiny]
 
 ## Help
 
@@ -195,8 +181,3 @@ sessionInfo()
 ```
 
 # References
-
-```{r vignetteBiblio, results="asis", echo=FALSE, warning=FALSE, message=FALSE}
-# Print bibliography
-PrintBibliography(bib, .opts = list(hyperlink = "to.doc", style = "html"))
-```
